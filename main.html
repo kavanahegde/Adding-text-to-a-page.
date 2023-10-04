@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding text to a page</title>
+    <script>
+        function addtext(){
+    if(!document.getElementById) return;
+    var sentence=document.changeform.sentence.value;
+    var node=document.createTextNode(" "+sentence);
+    document.getElementById("paragraph1").appendChild(node);
+    document.changeform.sentence.value=" ";
+}
+
+    </script>
+</head>
+<body>
+    <h1 id="heading1">Create your Own Content</h1>
+    <p>Using the W#C Doc,you can dynamically add to this paragraph.Not a good idea to let me add sentence :)</p>
+    <p>Type a sentence and click the Add!<strong>button</strong></p>
+    <form name="chengeform "> 
+        <input type="text" name="sentence" size="45" />
+        <button type="button" onclick="addtext();">Add!
+        </button>
+        
+    
+</form>
+</body>
+</html>
